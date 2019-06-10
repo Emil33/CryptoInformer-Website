@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="AjaxControlToolkit" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Master Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+        <link href="../WebsiteStyles.css" rel="stylesheet" />
+    </asp:ContentPlaceHolder>
+
+     <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+</head>
+<body>
+    <form runat="server">
+        
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="min-height: 70px; font-size:x-large">
+                <a class="navbar-brand" style="font-size:x-large" href="Default.aspx">Crypto Informer</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                        <a class="nav-link" href="Default.aspx">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="News.aspx">News</a>
+                        </li>
+                    </ul>
+                    <div class="form-inline my-2 my-lg-0">
+                        <asp:Label ID="userLabel" Text="" runat="server" />
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <asp:Label ID="registerLabel" Text="" runat="server"><a class="nav-link" href="Registration.aspx">Sign Up</a></asp:Label>
+                            </li>
+                            <li class="nav-item">
+                                <asp:Label ID="loginLabel" Text="" runat="server"><a class="nav-link" href="Login.aspx">Login</a></asp:Label>
+                            </li>
+                            <li class="nav-item" style="margin-left:15px">
+                                <asp:Button ID="logoutLabel" Text="Logout" BorderStyle="None" BackColor="Transparent" CssClass="nav-link"  OnClick="LogOutEventMethod" runat="server"></asp:Button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-fluid">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">       
+
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+    <%--Footer--%>
+    <hr />
+    <footer>
+        <p>&copy; 2019 - Crypto Informer</p>
+    </footer>
+    
+    <!-- JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

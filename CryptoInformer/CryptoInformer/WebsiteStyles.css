@@ -1,0 +1,68 @@
+﻿.inline {
+    display: inline-block;
+}
+
+.profileLeftColumnUL {
+    float: left;
+    height: 40px;
+    list-style-type: none;
+}
+
+.profileLeftColumnLI {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+/*li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}*/
+
+/*.card-img-top {
+    width: 20vw;
+    height: 20vw;
+}*/
+
+.logoImg {
+    width: 64px;
+    height: 64px;
+}
+
+.logoutButton {
+    border: none;
+    background: transparent;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.Star {
+    background-image: url(images/Star.gif);
+    height: 17px;
+    width: 17px;
+}
+
+.WaitingStar {
+    background-image: url(images/WaitingStar.gif);
+    height: 17px;
+    width: 17px;
+}
+
+.FilledStar {
+    background-image: url(images/FilledStar.gif);
+    height: 17px;
+    width: 17px;
+}
+
